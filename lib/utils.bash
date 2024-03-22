@@ -54,7 +54,7 @@ download_release() {
 	filename="$2"
 	platform=$(get_platform)
 
-	url="$GH_REPO/releases/download/${version}/sops-${version}.${platform}.amd64"
+	url="$GH_REPO/releases/download/v${version}/sops-v${version}.${platform}.amd64"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
